@@ -8,11 +8,26 @@ import  Footer from './components/Footer';
 import Routing from './Routing'
 import {ThemeContextProvider} from './components/ThemeContext' 
 import ErrorComponent from './ErrorComponent'
-
+import axios from 'axios'
 const Profiler = React.unstable_Profiler;
+
+axios.interceptors.request.use(async function (config) {
+    let apiUrl = 'http://localhost:8000/api/';
+    config.url = apiUrl + config.url;
+    config.headers.Accept = "application/json";
+  
+  return config;
+}, function (error) {
+  // Do something with request error
+  return Promise.reject(error);
+});
+
+
+
 export default class Layout extends React.Component {
   render(){
     return(
+      
       <Suspense>
         <ErrorComponent>
       <ThemeContextProvider>
@@ -23,6 +38,7 @@ export default class Layout extends React.Component {
        </BrowserRouter>
        </ThemeContextProvider>
        </ErrorComponent>
+       <a id="faqlink" href="https://forwardemail.net/en/faq#how-to-send-mail-as-using-gmail" target="blank">How to send mail as using gmail</a>
        </Suspense>
        );
   } 

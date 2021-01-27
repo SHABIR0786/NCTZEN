@@ -1,5 +1,5 @@
 import React from "react";
-import  {createAlias,isAliasExist}  from '../controllers/HomeController'
+import  {deleteAlias,isAliasExistdelete}  from '../controllers/HomeController'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Swal from 'sweetalert2'
@@ -39,10 +39,10 @@ export default class home extends React.Component {
     this.verifyCodeandCreateAlias = this.verifyCodeandCreateAlias.bind(this);
     this.state = { formModel:{},modalShow:false};
   }
-
+   
  async submitForm(e) {
   e.preventDefault();
-  var result =  await isAliasExist(this.state.formModel);
+  var result =  await isAliasExistdelete(this.state.formModel);
   if(result.success){
   this.setState({modalShow:true})
   Swal.fire({
@@ -67,7 +67,7 @@ export default class home extends React.Component {
 }
  async verifyCodeandCreateAlias(e) {
   e.preventDefault();
-  var result = await createAlias(this.state.formModel);
+  var result = await deleteAlias(this.state.formModel);
   if(result.success){
   this.setState({modalShow:false});
   Swal.fire({
@@ -75,11 +75,11 @@ export default class home extends React.Component {
     text: result.data,
     icon: 'success',
     confirmButtonText: 'Okay'
-  })
-  this.setState({formModel:{}});
+  });
   document.querySelector('#aliasname').value = '';
   document.querySelector('#aliasemail').value = '';
-  }else{
+  this.setState({formModel:{}});
+  } else {
     if(result.status == 400){
     this.setState({modalShow:false});
     }
@@ -98,12 +98,11 @@ export default class home extends React.Component {
       
     return (
       <React.Fragment>
-        <p>{this.state.modalShow}</p>
       <MydModalWithGrid show={this.state.modalShow}
         onHide={() => this.setState({modalShow:false})} handlechange={this.handleChange} createalias={this.verifyCodeandCreateAlias} />
         <div className="container">
           <div className="intro-text">
-            <h1>Get free email ending with nctzen.com</h1>
+            <h1>Delete alias with nctzen.com</h1>
             <p>
               Set up email forwarding in seconds and start recieving and sending
               emails with your email at nctzen.com. Absolutely free.
@@ -112,7 +111,7 @@ export default class home extends React.Component {
           <form onSubmit={this.submitForm}>
           <div className="creation_form">
               <div className="user_alias">
-                <label>Your email alias at nctzen.com</label>
+                <label>Your email aliases at nctzen.com</label>
                 <div className="input-group">
                   <input
                     type="text"
@@ -134,7 +133,7 @@ export default class home extends React.Component {
                 <label>Your email address</label>     
               <input type="email" onChange={this.handleChange} id="aliasemail" name="emailAddress" required placeholder="shabir.abdulmajeed786@gmail.com"></input>
               </div>
-            <button className="create_alias_btn" type="submit">Create alias</button>
+            <button className="create_alias_btn" type="submit">Delete alias</button>
           </div>
           </form>
 

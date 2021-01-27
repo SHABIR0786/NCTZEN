@@ -1,16 +1,25 @@
 import React from "react";
-import { Switch, Route } from 'react-router-dom';
-// import { createBrowserHistory } from 'history'
+import { Switch, Route,Router } from 'react-router-dom';
+import { useRouterHistory } from 'react-router';
+import { createBrowserHistory } from 'history'
 import home from './Pages/home';
-import contact from './Pages/about';
+import update from './Pages/update';
+import deletecomponent from './Pages/delete';
+
+
 
 
 import Error from './Error';
+const history = useRouterHistory(createBrowserHistory)({
+  basename: '/demo/nctzen'
+})
 const Routing  = () => {
         return(
           <Switch>
-          <Route path="/" component={home} exact/>
-          <Route path="/about" component={contact}/>
+          <Route exact path="/"  component={home}/>
+          <Route exact path="/update" component={update}/>
+          <Route exact path="/delete" component={deletecomponent}/>
+
           <Route component={Error}/>
           </Switch>
         ); 

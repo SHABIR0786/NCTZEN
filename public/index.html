@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/css/loader-circle.css">
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -15,7 +16,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -34,5 +35,42 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div class="loader">
+      <div id="circle-loader"></div>
+    </div>
+    <script>
+      function showLoader() {
+        if(document.querySelector('.loader')){
+          document.querySelector('.loader').style.background = 'white';
+        }
+        document.querySelector('.loader').style.display = 'block';
+      }
+      function hideLoader() {
+        document.querySelector('.loader').style.display = 'none';
+        if(document.querySelector('.c-header')){
+        document.querySelector('.c-header').style.zIndex = 1070;
+        document.querySelector('.c-sidebar').style.zIndex = 1070;z
+        document.querySelector('.c-sidebar-fixed').style.zIndex = 100;
+        }
+      }
+      function showloaderwtbg() {
+        document.querySelector('.loader').style.background = 'none';
+        document.querySelector('.loader').style.display = 'block';
+      }
+      function showloaderhp() {
+        if(document.querySelector('.loader')) {
+        document.querySelector('.loader').style.background = 'white';
+        }
+        document.querySelector('.c-header').style.zIndex = 1072;
+        document.querySelector('.c-sidebar').style.zIndex = 1072;
+        document.querySelector('.c-sidebar-fixed').style.zIndex = 100;
+        document.querySelector('.loader').style.display = 'block';
+      }
+      showLoader();
+      window.addEventListener("load", function () {
+      document.querySelector('body').classList.add('loaded');   
+      hideLoader(); 
+      }); 
+    </script>
   </body>
 </html>
