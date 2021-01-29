@@ -204,7 +204,6 @@ input[type=number] {
   position: absolute;
   margin-bottom: 9px;
   margin-left: 17px;
-
 }
 .btn.btn-primary {
   background: #51df3e;
@@ -214,3 +213,31 @@ button.swal2-styled {
   background: #51df3e !important;
   border:1px solid #51df3e !important;
 }
+#helpformcard{
+  margin-top:30px;
+}
+#helpformcard .card-header{
+  text-align: center;
+  color:#212529;
+}
+
+#helpformcard button[type='submit']{
+  background: #51df3e;
+  width: 100%;
+  height: 40px;
+  max-height: 80px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 17px 17px 17px 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  animation: fadeIn .75s forwards;
+  animation-delay: 1.5s
+}
+#helpformcard input::placeholder{
+ color:#777d87;
+} 

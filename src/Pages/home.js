@@ -49,14 +49,14 @@ export default class home extends React.Component {
     title: 'Success!',
     text: result.data,
     icon: 'success',
-    confirmButtonText: 'Okay'
+    confirmButtonText: 'Ok'
   });
   }else{
     Swal.fire({
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
   }
  }
@@ -74,7 +74,7 @@ export default class home extends React.Component {
     title: 'Success!',
     text: result.data,
     icon: 'success',
-    confirmButtonText: 'Okay'
+    confirmButtonText: 'Ok'
   })
   this.setState({formModel:{}});
   document.querySelector('#aliasname').value = '';
@@ -87,7 +87,7 @@ export default class home extends React.Component {
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
   }
 };
@@ -98,7 +98,6 @@ export default class home extends React.Component {
       
     return (
       <React.Fragment>
-        <p>{this.state.modalShow}</p>
       <MydModalWithGrid show={this.state.modalShow}
         onHide={() => this.setState({modalShow:false})} handlechange={this.handleChange} createalias={this.verifyCodeandCreateAlias} />
         <div className="container">

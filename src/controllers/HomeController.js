@@ -14,6 +14,16 @@ function showLoader() {
     document.querySelector('.c-sidebar-fixed').style.zIndex = 100;
     }
   }
+  async function helpQuery(form){
+    showLoader();
+    const Instance = {};
+    ApiRoutes.helpquery.data = form;
+    await axios(ApiRoutes.helpquery).then(function(response){
+     Instance.result = response.data;
+     });
+     hideLoader();
+     return Instance.result;
+  }
   async function isUpdateAlias(form) {
     showLoader();
     const Instance = {};
@@ -94,4 +104,4 @@ async function verifyOldAlias(form){
      hideLoader();
      return Instance.result; 
 }
-export {createAlias,sendEmail,isAliasExist,isAliasExistdelete,deleteAlias,verifyOldAlias,updatealias,isUpdateAlias}
+export {createAlias,sendEmail,isAliasExist,isAliasExistdelete,deleteAlias,verifyOldAlias,updatealias,isUpdateAlias,helpQuery}

@@ -51,7 +51,7 @@ constructor(props) {
     title: 'Error!',
     text: result.data,
     icon: 'error',
-    confirmButtonText: 'Okay'
+    confirmButtonText: 'Ok'
   });
   }
 }
@@ -67,14 +67,14 @@ async updateAlias(e) {
       title: 'Success!',
       text: result.data,
       icon: 'success',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
     }else{
       Swal.fire({
         title: 'Error!',
         text: result.data,
         icon: 'error',
-        confirmButtonText: 'Okay'
+        confirmButtonText: 'Ok'
       });
     }
 }
@@ -87,14 +87,14 @@ async sendUpdateAliasCode(e){
       title: 'Success!',
       text: result.data,
       icon: 'success',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
     }else{
       Swal.fire({
         title: 'Error!',
         text: result.data,
         icon: 'error',
-        confirmButtonText: 'Okay'
+        confirmButtonText: 'Ok'
       });
     }
 }
@@ -119,7 +119,7 @@ async verifyCodeNewAlias(e){
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
     } 
 }
@@ -140,7 +140,7 @@ async verifyCodeOldAlias(e) {
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
   }
 };

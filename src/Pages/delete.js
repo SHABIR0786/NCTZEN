@@ -49,14 +49,14 @@ export default class home extends React.Component {
     title: 'Success!',
     text: result.data,
     icon: 'success',
-    confirmButtonText: 'Okay'
+    confirmButtonText: 'Ok'
   });
   }else{
     Swal.fire({
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
   }
  }
@@ -74,7 +74,7 @@ export default class home extends React.Component {
     title: 'Success!',
     text: result.data,
     icon: 'success',
-    confirmButtonText: 'Okay'
+    confirmButtonText: 'Ok'
   });
   document.querySelector('#aliasname').value = '';
   document.querySelector('#aliasemail').value = '';
@@ -87,7 +87,7 @@ export default class home extends React.Component {
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Okay'
+      confirmButtonText: 'Ok'
     });
   }
 };

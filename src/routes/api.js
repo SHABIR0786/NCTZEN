@@ -7,6 +7,7 @@ const ApiRoutes = {
    isaliasexistdelete:{method:"POST",url:'isaliasexistdelete'},
    deleteAlias:{method:"DELETE",url:'deletealias'},
    verifyoldalias:{method:'POST',url:'verifyoldalias'},
-   updatealias:{method:'POST',url:'updatealias'}
+   updatealias:{method:'POST',url:'updatealias'},
+   helpquery:{method:'POST',url:'helpquery'}
 }
 export {ApiRoutes}
