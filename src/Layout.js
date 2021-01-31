@@ -27,16 +27,15 @@ axios.interceptors.request.use(async function (config) {
 export default class Layout extends React.Component {
   render(){
     return(
-      
       <Suspense>
         <ErrorComponent>
-      <ThemeContextProvider>
        <BrowserRouter>
+       <div id="RouterContent">
          <Header />
-          <Routing/>
-         {/* <Footer /> */}
+          <Routing />
+          </div>
+       <Footer />
        </BrowserRouter>
-       </ThemeContextProvider>
        </ErrorComponent>
        </Suspense>
        );

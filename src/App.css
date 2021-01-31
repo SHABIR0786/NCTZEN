@@ -293,3 +293,19 @@ button.swal2-styled {
 .answer table tbody tr td:nth-child(2) {
   padding-top:16px;
 }
+footer{
+  position: fixed;
+  overflow: hidden;
+  bottom:0;
+  width: 100%;
+  text-align: center;
+  /* background: #51df3e2b; */
+  background: white;
+}
+footer img{
+  height: 50px;
+  width: 50px;
+}
+#RouterContent{
+  margin-bottom: 100px;
+}

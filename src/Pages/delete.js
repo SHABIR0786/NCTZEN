@@ -131,7 +131,7 @@ export default class home extends React.Component {
               <span className="forwards_to">forward to</span>
               <div className="user_emailaddress">
                 <label>Your email address</label>     
-              <input type="email" onChange={this.handleChange} id="aliasemail" name="emailAddress" required placeholder="shabir.abdulmajeed786@gmail.com"></input>
+              <input type="email" onChange={this.handleChange} id="aliasemail" name="emailAddress" required placeholder="NCTzen@kandooit.co"></input>
               </div>
             <button className="create_alias_btn" type="submit">Delete alias</button>
           </div>

@@ -183,7 +183,7 @@ async verifyCodeOldAlias(e) {
               <span className="forwards_to">forward to</span>
               <div className="user_emailaddress">
                 <label>Your old email address</label>     
-              <input type="email" onChange={this.handleChange} id="aliasemail" name="emailAddress" required placeholder="shabir.abdulmajeed786@gmail.com"></input>
+              <input type="email" onChange={this.handleChange} id="aliasemail" name="emailAddress" required placeholder="NCTzen@kandooit.co"></input>
               </div>
             <button className="create_alias_btn" type="submit">Verify old alias</button>
           </div>
@@ -211,7 +211,7 @@ async verifyCodeOldAlias(e) {
               <span className="forwards_to">forward to</span>
               <div className="user_emailaddress">
                 <label>Your new email address</label>     
-              <input type="email" onChange={this.handleChange} id="newaliasemail" name="newemailAddress" required placeholder="shabir.abdulmajeed786@gmail.com"></input>
+              <input type="email" onChange={this.handleChange} id="newaliasemail" name="newemailAddress" required placeholder="NCTzen@kandooit.co"></input>
               </div>
             <button className="create_alias_btn" type="submit">Update alias</button>
           </div>
