@@ -38,7 +38,6 @@ export default class Layout extends React.Component {
        </BrowserRouter>
        </ThemeContextProvider>
        </ErrorComponent>
-       <a id="faqlink" href="https://forwardemail.net/en/faq#how-to-send-mail-as-using-gmail" target="blank">How to send mail as using gmail</a>
        </Suspense>
        );
   } 

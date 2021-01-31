@@ -23,6 +23,7 @@ return(
     <div className="navbar-nav">
       <Link to="/update" className="nav-item nav-link" href="#">Update</Link>
       <Link to="/delete" className="nav-item nav-link" href="#">Delete</Link>
+      <Link to="/faq" className="nav-item nav-link" href="#">FAQ</Link>
       <Link to="/contact" className="nav-item nav-link" href="#">Contact</Link>
     </div>
   </div>

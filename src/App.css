@@ -241,3 +241,49 @@ button.swal2-styled {
 #helpformcard input::placeholder{
  color:#777d87;
 } 
+
+/* Frequently asked questions */
+.faqheading{
+  text-align: center;
+  color:rgba(0,0,0,.9);
+  font-size: 20px;
+}
+.qa_tab{
+  padding:10px;
+ 
+}
+.qa_tab .question{
+  background: #51df3e2b;
+  padding:10px;
+  border-left: 5px solid #1eff00;
+
+
+}
+.qa_tab .question .q{
+  color:#1eff00;
+  font-size: 30px;
+  margin:5px;
+}
+.qa_tab .question .qstmt{
+  color:black;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.qa_tab .answer{
+  background: white;
+  padding:10px;
+  padding-left:0px !important;
+  border-left: 5px solid #9498948c;
+}
+.qa_tab .answer .a{
+  color:#949894;
+  font-size: 30px;
+  padding:10px;
+  margin:5px;
+}
+.qa_tab .answer .astmt{
+  color:#949894;
+  font-size: 16px;
+  padding-left: 6px;
+}
