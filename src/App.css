@@ -287,3 +287,9 @@ button.swal2-styled {
   font-size: 16px;
   padding-left: 6px;
 }
+.answer table tbody tr td:first-child {
+  display:block;
+}
+.answer table tbody tr td:nth-child(2) {
+  padding-top:16px;
+}

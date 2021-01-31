@@ -20,6 +20,7 @@ export default class contact extends React.Component {
   }
   render() {
     return (
+    <React.Fragment>
       <div className="container-fluid">
         <div className="faqheading">
           <h2>Frequently Asked Questions (FAQ)</h2>
@@ -27,6 +28,9 @@ export default class contact extends React.Component {
         <Accordion>
           <div className="qa_tab">
             <div className="question">
+            <table>
+            <tbody>
+            <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -41,14 +45,20 @@ export default class contact extends React.Component {
                   How to Send Mail As using Gmail?
                 </Accordion.Toggle>
               </td>
+              </tr>
+              </tbody>
+              </table>
             </div>
             <Accordion.Collapse eventKey="0">
               <div className="answer">
+                  <table>
+                      <tbody>
+                  <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <ol>
                       <li>
                         <p>
@@ -103,20 +113,20 @@ export default class contact extends React.Component {
                           Copy the password to your clipboard that is
                           automatically generated
                         </p>
-                        <div class="alert my-3 alert-warning">
-                          <i class="fa fa-exclamation-circle font-weight-bold"></i>
-                          <strong class="font-weight-bold">Important:</strong>
+                        <div className="alert my-3 alert-warning">
+                          <i className="fa fa-exclamation-circle font-weight-bold"></i>
+                          <strong className="font-weight-bold">Important:</strong>
                           <span>
                             If you are using G Suite, visit your admin panel{" "}
                             <a
-                              class="alert-link"
+                              className="alert-link"
                               href="https://admin.google.com/AdminHome#ServiceSettings/service=email&amp;subtab=filters"
                               rel="noopener noreferrer"
                               target="_blank"
                             >
-                              Apps <i class="fa fa-angle-right"></i> G Suite{" "}
-                              <i class="fa fa-angle-right"></i> Settings for
-                              Gmail <i class="fa fa-angle-right"></i> Advanced
+                              Apps <i className="fa fa-angle-right"></i> G Suite{" "}
+                              <i className="fa fa-angle-right"></i> Settings for
+                              Gmail <i className="fa fa-angle-right"></i> Advanced
                               settings
                             </a>{" "}
                             and make sure to check "Allow users to send mail
@@ -130,8 +140,8 @@ export default class contact extends React.Component {
                         <p>
                           Go to <a href="https://gmail.com">Gmail</a> and under{" "}
                           <a href="https://mail.google.com/mail/u/0/#settings/accounts">
-                            Settings <i class="fa fa-angle-right"></i> Accounts
-                            and Import <i class="fa fa-angle-right"></i> Send
+                            Settings <i className="fa fa-angle-right"></i> Accounts
+                            and Import <i className="fa fa-angle-right"></i> Send
                             mail as
                           </a>
                           , click "Add another email address"
@@ -155,15 +165,15 @@ export default class contact extends React.Component {
                       </li>
                       <li>
                         <p>Uncheck "Treat as an alias"</p>
-                        <div class="alert my-3 alert-primary">
-                          <i class="fa fa-info-circle font-weight-bold"></i>
-                          <strong class="font-weight-bold">Tip:</strong>
+                        <div className="alert my-3 alert-primary">
+                          <i className="fa fa-info-circle font-weight-bold"></i>
+                          <strong className="font-weight-bold">Tip:</strong>
                           <span>
                             If you prefer the recipient to reply directly to
                             your Gmail address, then leave this checked. To
                             learn more,{" "}
                             <a
-                              class="alert-link"
+                              className="alert-link"
                               href="https://support.google.com/a/answer/1710338"
                               rel="noopener noreferrer"
                               target="_blank"
@@ -197,9 +207,9 @@ export default class contact extends React.Component {
                           </span>
                           )
                         </p>
-                        <div class="alert my-3 alert-primary">
-                          <i class="fa fa-info-circle font-weight-bold"></i>
-                          <strong class="font-weight-bold">Important:</strong>
+                        <div className="alert my-3 alert-primary">
+                          <i className="fa fa-info-circle font-weight-bold"></i>
+                          <strong className="font-weight-bold">Important:</strong>
                           <span>
                             If the "Username" portion is autofilled, then{" "}
                             <u>
@@ -250,14 +260,19 @@ export default class contact extends React.Component {
                         </p>
                       </li>
                     </ol>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
-
-          <div className="qa_tab">
+           <div className="qa_tab">
             <div className="question">
+                <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -271,14 +286,20 @@ export default class contact extends React.Component {
                   Why am I not receiving my test emails?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="1">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       If you're sending a test email to yourself using the "Send
                       Mail As" feature, then it will not show up in your inbox
@@ -299,14 +320,20 @@ export default class contact extends React.Component {
                       <a href="/contact">Help request</a> so we can help
                       investigate the issue and find a quick resolution.
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -321,14 +348,20 @@ export default class contact extends React.Component {
                   "suspicious"?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="2">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       If you see this error message in Gmail when you send a
                       test to yourself, or when a person you're emailing with
@@ -352,14 +385,20 @@ export default class contact extends React.Component {
                       (just an example). Gmail will alert the users just to make
                       sure things are safe just in case, there is no workaround.
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -373,14 +412,20 @@ export default class contact extends React.Component {
                   Can I remove the via forwardemail dot net in Gmail?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="3">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       This is ONLY applicable if you are using the{" "}
                       <a href="#how-to-send-mail-as-using-gmail">
@@ -409,14 +454,20 @@ export default class contact extends React.Component {
                       and we'll send you a notification once it's released. Or
                       just sign up for an account here if you haven't already!
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -430,14 +481,20 @@ export default class contact extends React.Component {
                   What is the max email size limit?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="4">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       We default to a 50MB size limit, which includes content,
                       headers, and attachments. Note that services such as Gmail
@@ -449,14 +506,20 @@ export default class contact extends React.Component {
                       An error with the proper response code is returned if the
                       file size limit is exceeded.
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -470,26 +533,38 @@ export default class contact extends React.Component {
                   Do you store emails and their contents?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="5">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       No, absolutely not. See our{" "}
                       <a href="#privacypolicy">Privacy Policy</a>.
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -503,26 +578,38 @@ export default class contact extends React.Component {
                   Do you store logs of emails?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="6">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       No, absolutely not. See our{" "}
                       <a href="#privacypolicy">Privacy Policy</a>.
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -536,14 +623,20 @@ export default class contact extends React.Component {
                   Do you read my emails?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="7">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       No, absolutely not. We do not store logs. See our{" "}
                       <a href="#privacypolicy">Privacy Policy</a>.
@@ -564,14 +657,20 @@ export default class contact extends React.Component {
                       </a>{" "}
                       for transparency and to build trust.
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -586,14 +685,20 @@ export default class contact extends React.Component {
                   reputation?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="8">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       Per documentation and suggestions from Google at{" "}
                       <a href="https://support.google.com/a/answer/175365?hl=en">
@@ -687,14 +792,20 @@ export default class contact extends React.Component {
                         </p>
                       </li>
                     </ol>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -708,14 +819,20 @@ export default class contact extends React.Component {
                   Can I "send mail as" in Gmail with this?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="9">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       Yes! As of October 2, 2018 we have added this feature. See{" "}
                       <a href="#how-to-send-mail-as-using-gmail">
@@ -723,14 +840,20 @@ export default class contact extends React.Component {
                       </a>{" "}
                       above!
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -744,14 +867,20 @@ export default class contact extends React.Component {
                   Can I "send mail as" in Outlook with this?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="10">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       Yes! As of October 2, 2018 we have added this feature.
                       Simply view these two links from Microsoft below:
@@ -773,9 +902,9 @@ export default class contact extends React.Component {
                       configuration TXT record.
                     </p>
 
-                    <div class="alert my-3 alert-warning">
-                      <i class="fa fa-exclamation-circle font-weight-bold"></i>
-                      <strong class="font-weight-bold">Important:</strong>
+                    <div className="alert my-3 alert-warning">
+                      <i className="fa fa-exclamation-circle font-weight-bold"></i>
+                      <strong className="font-weight-bold">Important:</strong>
                       <span>
                         If you are using Microsoft Outlook or Live.com, you'll
                         need to append{" "}
@@ -792,14 +921,20 @@ export default class contact extends React.Component {
                         </code>
                       </span>
                     </div>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -813,14 +948,20 @@ export default class contact extends React.Component {
                   Can I "send mail as" in Apple Mail and iCloud Mail with this?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="11">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       Unfortunately Apple does not allow this, regardless of
                       which service you use. However you can use the Mail app
@@ -838,14 +979,20 @@ export default class contact extends React.Component {
                         </a>
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
           <div className="qa_tab">
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -859,14 +1006,20 @@ export default class contact extends React.Component {
                   Can I forward unlimited emails with this?
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="13">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <p>
                       Practically yes - the only current restriction is that
                       senders <strong>by unique email address</strong> are
@@ -877,14 +1030,20 @@ export default class contact extends React.Component {
                       If this limit is exceeded we send a "451" response code
                       which tells the senders mail server to retry later.
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
 
-          <div className="qa_tab" id="privacypolicy">
+          <div className="qa_tab" id="privacypolicy"> 
             <div className="question">
+            <table>
+                    <tbody>
+                        <tr>
               <td>
                 <span className="q">Q.</span>
               </td>
@@ -898,24 +1057,30 @@ export default class contact extends React.Component {
                   Privacy Policy
                 </Accordion.Toggle>
               </td>
+              </tr>
+                    </tbody>
+                </table>
             </div>
             <Accordion.Collapse eventKey="12">
               <div className="answer">
+              <table>
+                    <tbody>
+                        <tr>
                 <td>
                   <span className="a">A.</span>
                 </td>
                 <td>
-                  <p className="astmt">
+                  <div className="astmt">
                     <h2>
                       <a
-                        class="anchor"
+                        className="anchor"
                         href="#information-not-collected"
                         aria-hidden="true"
                         id="information-not-collected"
                       >
                         <svg
                           aria-hidden="true"
-                          class="octicon octicon-link"
+                          className="octicon octicon-link"
                           height="16"
                           version="1.1"
                           viewBox="0 0 16 16"
@@ -935,14 +1100,14 @@ export default class contact extends React.Component {
                     </ul>
                     <h2>
                       <a
-                        class="anchor"
+                        className="anchor"
                         href="#information-collected"
                         aria-hidden="true"
                         id="information-collected"
                       >
                         <svg
                           aria-hidden="true"
-                          class="octicon octicon-link"
+                          className="octicon octicon-link"
                           height="16"
                           version="1.1"
                           viewBox="0 0 16 16"
@@ -988,14 +1153,14 @@ export default class contact extends React.Component {
                     </ul>
                     <h2>
                       <a
-                        class="anchor"
+                        className="anchor"
                         href="#information-shared"
                         aria-hidden="true"
                         id="information-shared"
                       >
                         <svg
                           aria-hidden="true"
-                          class="octicon octicon-link"
+                          className="octicon octicon-link"
                           height="16"
                           version="1.1"
                           viewBox="0 0 16 16"
@@ -1025,13 +1190,18 @@ export default class contact extends React.Component {
                       mentioned above, so we will not be able to provide it to
                       begin with).
                     </p>
-                  </p>
+                  </div>
                 </td>
+                </tr>
+                    </tbody>
+                </table>
               </div>
             </Accordion.Collapse>
           </div>
+
         </Accordion>
       </div>
+      </React.Fragment>
     );
   }
 }
