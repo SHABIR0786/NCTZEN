@@ -100,8 +100,8 @@ export default class contact extends React.Component {
                             When prompted for text input, enter your custom
                             domain's email address you're forwarding from (e.g.
                             "
-                            <a href="mailto:hello@example.com">
-                              hello@example.com
+                            <a href="mailto:mark@NCTzen.com">
+                              mark@NCTzen.com
                             </a>
                             " - this will help you keep track in case you use
                             this service for multiple accounts)
@@ -111,7 +111,8 @@ export default class contact extends React.Component {
                       <li>
                         <p>
                           Copy the password to your clipboard that is
-                          automatically generated
+                          automatically generated    
+
                         </p>
                         <div className="alert my-3 alert-warning">
                           <i className="fa fa-exclamation-circle font-weight-bold"></i>
@@ -150,15 +151,15 @@ export default class contact extends React.Component {
                       <li>
                         <p>
                           When prompted for "Name", enter the name that you want
-                          your email to be seen as "From" (e.g. "Elon Musk")
+                          your email to be seen as "From" (e.g. "Mark Lee")
                         </p>
                       </li>
                       <li>
                         <p>
                           When prompted for "Email address", enter the email
                           address with the custom domain you used above (e.g. "
-                          <a href="mailto:hello@example.com">
-                            hello@example.com
+                          <a href="mailto:mark@NCTzen.com">
+                            mark@NCTzen.com
                           </a>
                           ")
                         </p>
@@ -310,12 +311,6 @@ export default class contact extends React.Component {
                       .
                     </p>
                     <p>
-                      If you continue to have issues, then it is most likely to
-                      be an issue with DNS propagation. You will need to wait a
-                      bit longer and try again (or try setting a lower TTL value
-                      on your TXT records).
-                    </p>
-                    <p>
                       <strong>Still having issues?</strong> Please file a{" "}
                       <a href="/contact">Help request</a> so we can help
                       investigate the issue and find a quick resolution.
@@ -379,8 +374,8 @@ export default class contact extends React.Component {
                       were normally used to seeing your emails come from{" "}
                       <a href="mailto:john@gmail.com">john@gmail.com</a> instead
                       of{" "}
-                      <a href="mailto:john@customdomain.com">
-                        john@customdomain.com
+                      <a href="mailto:john@NCTzen.com">
+                      john@NCTzen.com
                       </a>{" "}
                       (just an example). Gmail will alert the users just to make
                       sure things are safe just in case, there is no workaround.
@@ -435,24 +430,6 @@ export default class contact extends React.Component {
                       affects all service providers (not just us). The
                       workaround is to use a custom SMTP server. However we do
                       not offer SMTP yet.
-                    </p>
-                    <p>
-                      We plan to release our very own SMTP service (not just
-                      forwarding, but email in general), which would alleviate
-                      this. Gmail automatically adds this and there is no
-                      current workaround. Other email forwarding services with
-                      similar features to ours will still incur this same issue
-                      too (and other email forwarding solutions simply do not
-                      offer the level of privacy we do).
-                    </p>
-                    <p>
-                      If you want to get notified when this is released, you can
-                      email{" "}
-                      <a href="mailto:smtp@forwardemail.net">
-                        smtp@forwardemail.net
-                      </a>{" "}
-                      and we'll send you a notification once it's released. Or
-                      just sign up for an account here if you haven't already!
                     </p>
                   </div>
                 </td>
@@ -800,55 +777,6 @@ export default class contact extends React.Component {
               </div>
             </Accordion.Collapse>
           </div>
-
-          <div className="qa_tab">
-            <div className="question">
-            <table>
-                    <tbody>
-                        <tr>
-              <td>
-                <span className="q">Q.</span>
-              </td>
-              <td>
-                <Accordion.Toggle
-                  as={Button}
-                  variant="link"
-                  eventKey="9"
-                  className="qstmt"
-                >
-                  Can I "send mail as" in Gmail with this?
-                </Accordion.Toggle>
-              </td>
-              </tr>
-                    </tbody>
-                </table>
-            </div>
-            <Accordion.Collapse eventKey="9">
-              <div className="answer">
-              <table>
-                    <tbody>
-                        <tr>
-                <td>
-                  <span className="a">A.</span>
-                </td>
-                <td>
-                  <div className="astmt">
-                    <p>
-                      Yes! As of October 2, 2018 we have added this feature. See{" "}
-                      <a href="#how-to-send-mail-as-using-gmail">
-                        How to Send Mail As using Gmail
-                      </a>{" "}
-                      above!
-                    </p>
-                  </div>
-                </td>
-                </tr>
-                    </tbody>
-                </table>
-              </div>
-            </Accordion.Collapse>
-          </div>
-
           <div className="qa_tab">
             <div className="question">
             <table>

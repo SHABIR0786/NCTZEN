@@ -1,5 +1,5 @@
 import React from "react";
-import  {isAliasExistdelete,verifyOldAlias,isAliasExist,updatealias,isUpdateAlias}  from '../controllers/HomeController'
+import  {isOldAliasExist,verifyOldAlias,isAliasExist,updatealias,isUpdateAlias}  from '../controllers/HomeController'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Swal from 'sweetalert2';
@@ -43,7 +43,7 @@ constructor(props) {
 
  async submitForm(e) {
   e.preventDefault();
-  var result =  await isAliasExistdelete(this.state.formModel);
+  var result =  await isOldAliasExist(this.state.formModel);
   if(result.success) {
   this.setState({modalShow:true})
   } else {
@@ -51,7 +51,7 @@ constructor(props) {
     title: 'Error!',
     text: result.data,
     icon: 'error',
-    confirmButtonText: 'Ok'
+    confirmButtonText: 'OK'
   });
   }
 }
@@ -67,14 +67,14 @@ async updateAlias(e) {
       title: 'Success!',
       text: result.data,
       icon: 'success',
-      confirmButtonText: 'Ok'
+      confirmButtonText: 'OK'
     });
     }else{
       Swal.fire({
         title: 'Error!',
         text: result.data,
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'OK'
       });
     }
 }
@@ -87,14 +87,14 @@ async sendUpdateAliasCode(e){
       title: 'Success!',
       text: result.data,
       icon: 'success',
-      confirmButtonText: 'Ok'
+      confirmButtonText: 'OK'
     });
     }else{
       Swal.fire({
         title: 'Error!',
         text: result.data,
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'OK'
       });
     }
 }
@@ -119,7 +119,7 @@ async verifyCodeNewAlias(e){
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Ok'
+      confirmButtonText: 'OK'
     });
     } 
 }
@@ -140,7 +140,7 @@ async verifyCodeOldAlias(e) {
       title: 'Error!',
       text: result.data,
       icon: 'error',
-      confirmButtonText: 'Ok'
+      confirmButtonText: 'OK'
     });
   }
 };

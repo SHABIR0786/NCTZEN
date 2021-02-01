@@ -54,6 +54,16 @@ function showLoader() {
      hideLoader();
      return Instance.result;
   }
+  async function isOldAliasExist(form){
+    showLoader();
+    const Instance = {};
+     ApiRoutes.isoldaliasexist.data = form;
+    await axios(ApiRoutes.isoldaliasexist).then(function(response){
+     Instance.result = response.data;
+     });
+     hideLoader();
+     return Instance.result;
+  }
 async function createAlias(form){
     showLoader();
    const Instance = {};
@@ -104,4 +114,4 @@ async function verifyOldAlias(form){
      hideLoader();
      return Instance.result; 
 }
-export {createAlias,sendEmail,isAliasExist,isAliasExistdelete,deleteAlias,verifyOldAlias,updatealias,isUpdateAlias,helpQuery}
+export {createAlias,sendEmail,isAliasExist,isAliasExistdelete,deleteAlias,verifyOldAlias,updatealias,isUpdateAlias,helpQuery,isOldAliasExist}

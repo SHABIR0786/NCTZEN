@@ -5,6 +5,7 @@ const ApiRoutes = {
    isAliasExist:{method:"GET",url:'isaliasexist'},
    isUpdateAlias:{method:'GET',url:'isupdatealias'},
    isaliasexistdelete:{method:"POST",url:'isaliasexistdelete'},
+   isoldaliasexist:{method:"POST",url:'isoldaliasexist'},
    deleteAlias:{method:"DELETE",url:'deletealias'},
    verifyoldalias:{method:'POST',url:'verifyoldalias'},
    updatealias:{method:'POST',url:'updatealias'},

@@ -12,7 +12,8 @@ import axios from 'axios'
 const Profiler = React.unstable_Profiler;
 
 axios.interceptors.request.use(async function (config) {
-    let apiUrl = 'https://api.nctzen.com/api/';
+    // let apiUrl = 'https://api.nctzen.com/api/';
+    let apiUrl = 'http://localhost:8000/api/';
     config.url = apiUrl + config.url;
     config.headers.Accept = "application/json";
   
